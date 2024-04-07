@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: UserService
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/microservices
+    username: sandip
+    password: S@ndeep123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+   
+server:
+  port: 8081
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+  instance:
+    prefer-ip-address: true # Register with IP address instead of hostname
+    lease-renewal-interval-in-seconds: 30 # Heartbeat interval for renewing lease with Eureka server
+    lease-expiration-duration-in-seconds: 90 # Duration for which the lease is considered valid without renewal
+  # Remove duplicate 'client' key
+  fetch-registry: true # Fetch registry from Eureka server
+  
+
+
+    
