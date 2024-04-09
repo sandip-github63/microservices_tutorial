@@ -1,24 +1,6 @@
 spring:
   application:
-    name: user-service
-
-  datasource:
-    url: jdbc:mysql://localhost:3306/microservices
-    username: sandip
-    password: S@ndeep123
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
-  jpa:
-    database-platform: org.hibernate.dialect.MySQL8Dialect
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
-   
-server:
-  port: 8081
+    name: SpringGateway
   
 eureka:
   client:
@@ -31,6 +13,21 @@ eureka:
   # Remove duplicate 'client' key
   fetch-registry: true # Fetch registry from Eureka server
   
-
+  
+ #configuring the request for userservice 
+ 
+#
+#  cloud:
+#    gateway:
+#      routes:
+#      - id: user-service
+#        uri: lb://user-service
+#        predicates:
+#        - Path=/api/users/**
+        
+        
+logging:
+  file:
+    name: my-application.log
 
     

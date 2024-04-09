@@ -1,0 +1,8 @@
+Where to Learn Microservices
+**********************************
+1) LCWD
+2) Think Constructive --> https://www.youtube.com/watch?v=FzDy60okapI
+
+Note: If API Gateway is not working then kindly visit this 2 youtube channel.
+
+
